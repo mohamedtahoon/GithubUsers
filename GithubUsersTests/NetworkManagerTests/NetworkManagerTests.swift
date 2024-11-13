@@ -44,7 +44,7 @@ class NetworkManagerTests: XCTestCase {
             })
             .store(in: &cancellables)
         
-        waitForExpectations(timeout: 4, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
     }
     
     func testFetchData_Failure() {
@@ -67,6 +67,6 @@ class NetworkManagerTests: XCTestCase {
             })
             .store(in: &cancellables)
         
-        waitForExpectations(timeout: 4, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
     }
 }

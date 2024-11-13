@@ -13,7 +13,9 @@ class GitHubUserService {
     private let networkManager = NetworkManager.shared
     
     func fetchUsers() -> AnyPublisher<[GitHubUsersModel], Error> {
-        let url = URL(string: "https://api.github.com/users")!
+        guard let url = GitHubAPI.url(for: GitHubAPI.Endpoints.users) else {
+            return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
+        }
         return networkManager.fetchData(from: url, type: [GitHubUsersModel].self)
     }
     

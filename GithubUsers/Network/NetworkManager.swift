@@ -16,7 +16,7 @@ class NetworkManager {
     //MARK: This token because i reached the free limit for hiting the apis, so i hade to use token to continue testing.
     private let defaultToken = "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"
     
-    func fetchData<T: Decodable>(
+    func fetchData<T: Codable>(
         from url: URL,
         type: T.Type,
         token: String? = nil,

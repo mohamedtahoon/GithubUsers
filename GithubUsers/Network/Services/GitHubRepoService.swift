@@ -13,7 +13,9 @@ class GitHubRepoService {
     private let networkManager = NetworkManager.shared
     
     func fetchRepositories(username: String) -> AnyPublisher<[GitHubRepoModel], Error> {
-        let url = URL(string: "https://api.github.com/users/\(username)/repos")!
+        guard let url = GitHubAPI.url(for: GitHubAPI.Endpoints.userRepos(username: username)) else {
+            return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
+        }
         return networkManager.fetchData(from: url, type: [GitHubRepoModel].self)
     }
 }

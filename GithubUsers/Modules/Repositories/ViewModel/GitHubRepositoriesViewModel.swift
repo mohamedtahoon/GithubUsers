@@ -14,8 +14,12 @@ class GitHubRepositoriesViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var errorMessage: IdentifiableError?
     
-    private let repoService = GitHubRepoService()
+    private var repoService = GitHubRepoService()
     private var cancellables = Set<AnyCancellable>()
+    
+    init(repoService: GitHubRepoService = GitHubRepoService()) {
+        self.repoService = repoService
+    }
     
     func fetchRepositories(username: String) {
         isLoading = true

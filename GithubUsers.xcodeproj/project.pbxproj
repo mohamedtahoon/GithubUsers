@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E41554B2CE4D5750055A814 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E41554A2CE4D5750055A814 /* GitHubAPI.swift */; };
+		4E4155502CE4D7310055A814 /* RepoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E41554F2CE4D7310055A814 /* RepoViewModelTests.swift */; };
 		4E57FF872CE2E977007ECC83 /* ForkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E57FF862CE2E977007ECC83 /* ForkCell.swift */; };
 		4E57FF8A2CE2F57B007ECC83 /* IdentifiableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E57FF892CE2F57B007ECC83 /* IdentifiableError.swift */; };
 		4E57FF8F2CE35D9C007ECC83 /* GitHubUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E57FF8E2CE35D9C007ECC83 /* GitHubUserService.swift */; };
@@ -56,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E41554A2CE4D5750055A814 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		4E41554F2CE4D7310055A814 /* RepoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewModelTests.swift; sourceTree = "<group>"; };
 		4E57FF862CE2E977007ECC83 /* ForkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkCell.swift; sourceTree = "<group>"; };
 		4E57FF892CE2F57B007ECC83 /* IdentifiableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableError.swift; sourceTree = "<group>"; };
 		4E57FF8E2CE35D9C007ECC83 /* GitHubUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserService.swift; sourceTree = "<group>"; };
@@ -117,6 +121,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E41554C2CE4D66B0055A814 /* NetworkManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4E57FF962CE3693E007ECC83 /* NetworkManagerTests.swift */,
+			);
+			path = NetworkManagerTests;
+			sourceTree = "<group>";
+		};
+		4E41554D2CE4D6980055A814 /* UsersTests */ = {
+			isa = PBXGroup;
+			children = (
+				4E57FF982CE36A58007ECC83 /* UsersViewModelTests.swift */,
+			);
+			path = UsersTests;
+			sourceTree = "<group>";
+		};
+		4E41554E2CE4D71A0055A814 /* RepoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4E41554F2CE4D7310055A814 /* RepoViewModelTests.swift */,
+			);
+			path = RepoTests;
+			sourceTree = "<group>";
+		};
 		4E57FF842CE2DF8E007ECC83 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +176,7 @@
 				4E57FF8E2CE35D9C007ECC83 /* GitHubUserService.swift */,
 				4E57FF902CE35DA9007ECC83 /* GitHubRepoService.swift */,
 				4E57FF922CE35DB5007ECC83 /* GitHubForkService.swift */,
+				4E41554A2CE4D5750055A814 /* GitHubAPI.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -223,9 +252,10 @@
 		4EF13D332CE1626100BDD932 /* GithubUsersTests */ = {
 			isa = PBXGroup;
 			children = (
+				4E41554E2CE4D71A0055A814 /* RepoTests */,
+				4E41554D2CE4D6980055A814 /* UsersTests */,
+				4E41554C2CE4D66B0055A814 /* NetworkManagerTests */,
 				4EF13D342CE1626100BDD932 /* GithubUsersTests.swift */,
-				4E57FF962CE3693E007ECC83 /* NetworkManagerTests.swift */,
-				4E57FF982CE36A58007ECC83 /* UsersViewModelTests.swift */,
 			);
 			path = GithubUsersTests;
 			sourceTree = "<group>";
@@ -522,6 +552,7 @@
 				4EF13D612CE1827000BDD932 /* ImageLoader.swift in Sources */,
 				4EF13D642CE182E700BDD932 /* ForksView.swift in Sources */,
 				4EF13D232CE1626000BDD932 /* GithubUsersApp.swift in Sources */,
+				4E41554B2CE4D5750055A814 /* GitHubAPI.swift in Sources */,
 				4E57FF932CE35DB5007ECC83 /* GitHubForkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E4155502CE4D7310055A814 /* RepoViewModelTests.swift in Sources */,
 				4E57FF972CE3693E007ECC83 /* NetworkManagerTests.swift in Sources */,
 				4E57FF992CE36A58007ECC83 /* UsersViewModelTests.swift in Sources */,
 				4EF13D352CE1626100BDD932 /* GithubUsersTests.swift in Sources */,

@@ -14,8 +14,13 @@ class GitHubForksViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var errorMessage: IdentifiableError?
     
-    private let forkService = GitHubForkService()
+    private var forkService = GitHubForkService()
     private var cancellable: AnyCancellable?
+    
+    // Dependency Injection for testability
+    init(forkService: GitHubForkService = GitHubForkService()) {
+        self.forkService = forkService
+    }
     
     func fetchForks(owner: String, repo: String) {
         isLoading = true
